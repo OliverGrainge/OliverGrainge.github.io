@@ -26,18 +26,18 @@ repository               : "OliverGrainge/OliverGrainge.github.io"
 author:
   # Biographic information
   #avatar          : "profile.png"
-  avatar           : "bio_pic.png"
-  name             : "Your Sidebar Name"
+  avatar           : "profile.png"
+  name             : "Oliver Grainge"
   pronouns         : # example: "she/her"  
   bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  location         : "East Sussex, United Kingdom"
+  employer         : "University Of Southampton"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "oeg1n18@soton.ac.uk" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?user=Pg7KOd4AAAAJ&hl=en"
   impactstory      : # URL
   orcid            : "http://orcid.org/yourorcidurl"
   semantic         : # URL
