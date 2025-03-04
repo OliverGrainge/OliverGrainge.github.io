@@ -1,7 +1,15 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
-collection: portfolio
+title: "VSLAM: Visual Simultaneous Localization and Mapping"
+date: "2025-03-04"
+categories: ["Projects", "Computer Vision"]
+tags: ["Visual SLAM", "Python", "KITTI"]
+description: "A simplified Python implementation of Stereo Visual SLAM with demo scripts for key processes in visual localization and mapping."
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+# VSLAM (Visual Simultaneous Localization and Mapping)
+
+**VSLAM** is a streamlined Python implementation of Stereo Visual SLAM. Utilizing libraries such as **numpy**, **opencv**, and **scipy**, it performs feature detection, tracking, matching, motion estimation, and optimization—all designed with the **KITTI dataset** in mind.
+
+The project includes demo scripts that illustrate essential processes in the visual SLAM pipeline, providing an accessible platform for research and experimentation in visual localization and mapping.
+
+[![Watch the video](https://path_to_thumbnail_image.jpg)](https://github.com/OliverGrainge/VSLAM/assets/140703829/cced9a2f-f5e9-4844-886f-2b46847a6835)
