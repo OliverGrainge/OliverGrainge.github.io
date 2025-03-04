@@ -5,9 +5,6 @@ collection: portfolio
 ---
 
 
-
-# TeTRA-VPR: A Ternary Transformer Approach for Compact Visual Place Recognition
-
 Visual Place Recognition (VPR) is the process of localizing a query image by matching it against 
 a database of geo-tagged images. In robotics and autonomous systems, this capability is vital 
 for navigation and mapping—especially in environments where GPS or other external signals 
