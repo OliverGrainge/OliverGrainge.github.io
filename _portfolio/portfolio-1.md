@@ -1,9 +1,10 @@
 ---
-layout: single
 title: "TeTRA-VPR: A Ternary Transformer Approach for Compact Visual Place Recognition"
-excerpt: "A compact and efficient approach for Visual Place Recognition using extreme low-bit quantization and progressive distillation."
+excerpt: "A compact and efficient approach for Visual Place Recognition using extreme low-bit quantization and progressive distillation. <br/><img src='/images/TeTRA.jpg'>"
 collection: portfolio
 ---
+
+
 
 # TeTRA-VPR: A Ternary Transformer Approach for Compact Visual Place Recognition
 
@@ -74,4 +75,4 @@ drones or small mobile robots.
 As robotics and autonomous systems continue to evolve, methods like TeTRA-VPR will be integral to 
 creating compact, efficient solutions for localization and mapping in the real world.
 
----
+
