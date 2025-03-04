@@ -1,0 +1,8 @@
+---
+title: "VSLAM: Visual Simultaneous Localization and Mapping"
+date: "2025-03-04"
+categories: ["Projects", "Computer Vision"]
+tags: ["Visual SLAM", "Python", "KITTI"]
+description: "A simplified Python implementation of Stereo Visual SLAM with demo scripts for key processes in visual localization and mapping."
+---
+
