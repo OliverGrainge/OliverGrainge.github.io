@@ -5,17 +5,120 @@ collection: portfolio
 ---
 
 
+---
+title: "TeTRA-VPR: A Ternary Transformer Approach for Compact Visual Place Recognition"
+excerpt: "A compact and efficient approach for Visual Place Recognition using extreme low-bit quantization and progressive distillation. <br/><img src='/images/500x300.png'>"
+collection: portfolio
+---
 
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8">
+    <title>TeTRA-VPR: A Ternary Transformer Approach for Compact Visual Place Recognition</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+      }
+      h1, h2, h3 {
+        color: #333;
+      }
+      p {
+        margin-bottom: 1em;
+      }
+      .center {
+        text-align: center;
+      }
+      .figure {
+        margin: 20px 0;
+      }
+      .figure img {
+        max-width: 100%;
+        height: auto;
+      }
+      .caption {
+        font-style: italic;
+        font-size: 0.9em;
+        color: #555;
+      }
+    </style>
+  </head>
   <body>
+    <h1>TeTRA-VPR: A Ternary Transformer Approach for Compact Visual Place Recognition</h1>
+
     <p>
-      This method achieves up to <strong>69% lower memory usage</strong> and <strong>35% lower inference latency</strong> compared to efficient baselines, all while maintaining high retrieval accuracy. The system is implemented using <strong>PyTorch Lightning</strong> with dedicated scripts for pre-training and fine-tuning, ensuring robust performance across diverse conditions.
+      Visual Place Recognition (VPR) is the process of localizing a query image by matching it against a database of geo-tagged images. In robotics and autonomous systems, this capability is vital for navigation and mapping—especially in environments where GPS or other external signals might be unreliable.
     </p>
+
+    <h2>Understanding Visual Place Recognition (VPR)</h2>
+    <p>
+      Imagine a robot trying to figure out where it is by looking around and comparing what it sees with a stored set of images taken at known locations. That’s VPR in action. Traditional approaches used hand-crafted features like SIFT or SURF to detect keypoints, but modern methods harness deep learning to create robust and discriminative representations.
+    </p>
+    <p>
+      With the advent of Vision Transformers (ViTs), the quality of these representations has significantly improved. However, such high-performing models are often very large and resource-hungry, making them impractical for deployment on platforms with strict memory or processing limitations—such as drones or mobile robots.
+    </p>
+
+    <h2>The TeTRA-VPR Approach: Making VPR Efficient</h2>
+    <p>
+      The paper introduces <strong>TeTRA-VPR</strong>, a method that tackles this challenge by compressing a Vision Transformer model through extreme low-bit quantization. In simpler terms, the idea is to reduce the number of bits used to represent the model’s parameters so that it occupies less memory and computes faster.
+    </p>
+    <p>
+      Specifically, TeTRA-VPR applies <em>ternary quantization</em> to most of its transformer backbone—restricting weights to one of three possible values (typically -1, 0, or 1)—and further binarizes the final embedding layer. This binarization allows for highly efficient similarity searches using simple operations like XOR and bitcount.
+    </p>
+
+    <h3>Figure 1: TeTRA Block Diagram</h3>
+    <div class="figure center">
+      <img src="/images/TeTRA.jpg" alt="TeTRA Block Diagram">
+      <p class="caption">Figure 1. TeTRA block diagram illustrating the ternary and binary training pipeline.</p>
+    </div>
+
+    <h2>How TeTRA-VPR Works</h2>
+    <p>
+      The method follows a two-stage training pipeline:
+    </p>
+    <ul>
+      <li>
+        <strong>Pre-training with Progressive Quantization and Distillation:</strong>
+        The model is gradually transitioned from full-precision training to low-bit (ternary) quantization. This progressive approach minimizes training instability by slowly introducing quantization constraints. A full-precision “teacher” model guides the training of the compressed “student” model via knowledge distillation, ensuring that high-quality representations are preserved.
+      </li>
+      <li>
+        <strong>Fine-tuning for VPR:</strong>
+        After pre-training, the model is fine-tuned using supervised contrastive learning on a place recognition dataset. In this phase, most of the transformer layers are frozen while an aggregation module is trained on top of the extracted features. The final embeddings are binarized, allowing for rapid similarity searches.
+      </li>
+    </ul>
+    <p>
+      This careful combination of ternary quantization, binary embedding, and progressive distillation results in a model that achieves comparable—and in some cases superior—recognition performance while using up to <strong>69% less memory</strong> and offering <strong>35% lower inference latency</strong> than traditional convolution-based approaches.
+    </p>
+
+    <h3>Figure 2: Pareto-Optimal Trade-off in VPR</h3>
+    <div class="figure center">
+      <img src="/images/fig2.jpg" alt="Radar Plot of Normalized Metrics">
+      <p class="caption">Figure 2. Radar plot comparing normalized metrics for memory usage, matching speed, and Recall@1 accuracy, illustrating the Pareto-optimal trade-off achieved by TeTRA-VPR.</p>
+    </div>
+
+    <h2>Experimental Highlights</h2>
+    <p>
+      Extensive experiments on standard VPR benchmarks reveal that TeTRA-VPR not only maintains high retrieval accuracy but also significantly reduces resource usage. Whether dealing with drastic lighting changes or other appearance variations, the model delivers a balanced trade-off between performance and efficiency—a critical requirement for resource-constrained platforms.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+      TeTRA-VPR demonstrates that with smart design choices, it is possible to dramatically compress advanced Vision Transformer models without sacrificing accuracy. This breakthrough paves the way for deploying high-performance VPR systems on devices where memory and compute are at a premium, such as drones and mobile robots.
+    </p>
+    <p>
+      As autonomous systems continue to evolve, techniques like TeTRA-VPR will be essential in developing smarter, more efficient machines capable of robust navigation and mapping in the real world.
+    </p>
+
+    <div class="center">
+      <!-- Embedded demo video or project overview -->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/example" 
+              frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+    </div>
     
-    <!-- Embedded demo video or project overview -->
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/example" 
-            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-    </iframe>
   </body>
 </html>
