@@ -4,133 +4,50 @@ excerpt: "A comprehensive hands-on course developed with Arm University covering
 collection: portfolio
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generative AI on Arm Course</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            color: #333;
-        }
-        h1 {
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
-        }
-        h2 {
-            color: #34495e;
-            margin-top: 30px;
-        }
-        .github-frame {
-            margin: 30px 0;
-            border: 1px solid #d0d7de;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-        }
-        .github-frame iframe {
-            width: 100%;
-            height: 500px;
-            border: none;
-        }
-        .frame-caption {
-            background: #f6f8fa;
-            padding: 10px;
-            font-size: 14px;
-            color: #656d76;
-            text-align: center;
-        }
-        ul {
-            margin: 15px 0;
-        }
-        li {
-            margin: 8px 0;
-        }
-        .highlight {
-            background: #fff3cd;
-            padding: 15px;
-            border-left: 4px solid #ffc107;
-            margin: 20px 0;
-        }
-        a {
-            color: #0969da;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .course-link {
-            background: #0969da;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 6px;
-            display: inline-block;
-            margin: 20px 0;
-            font-weight: 500;
-        }
-        .course-link:hover {
-            background: #0550ae;
-            color: white;
-            text-decoration: none;
-        }
-    </style>
-</head>
-<body>
-    <h1>Building "Generative AI on Arm": A Hands-On Course for Efficient AI Inference</h1>
-    
-    <p>I recently had the opportunity to develop a comprehensive course with Arm University called <strong>"Generative AI on Arm"</strong> that addresses one of the most critical challenges in modern AI: deploying generative models efficiently across diverse computing environments.</p>
+# Building “Generative AI on Arm”: A Hands-On Course for Efficient AI Inference
 
-    <div class="github-frame">
-        <a href="https://github.com/arm-university/AI-on-Arm" target="_blank">
-            <img src="image/ai_on_arm.png" 
-                 alt="AI on Arm GitHub Repository" 
-                 style="width: 100%; height: auto; display: block;">
-        </a>
-        <div class="frame-caption">
-            Click to view the AI-on-Arm GitHub repository
-        </div>
-    </div>
+I recently had the opportunity to develop a comprehensive course with Arm University called **“Generative AI on Arm”** that addresses one of the most critical challenges in modern AI: deploying generative models efficiently across diverse computing environments.
 
-    <h2>The Problem We're Solving</h2>
-    <p>As generative AI becomes ubiquitous, a critical bottleneck has emerged: how do we efficiently deploy these powerful models across the spectrum from edge devices like Raspberry Pi to cloud servers? This becomes especially complex with Arm architectures, which power everything from smartphones to AWS Graviton instances.</p>
+[![AI on Arm GitHub Repository](image/ai_on_arm.png)](https://github.com/arm-university/AI-on-Arm)  
+*Click to view the AI-on-Arm GitHub repository*
 
-    <h2>A Practical, Hands-On Approach</h2>
-    <p>This course stands out through its three core laboratories that tackle real-world scenarios:</p>
-    <ul>
-        <li><strong>Lab 1:</strong> Optimizing generative AI on Raspberry Pi 5</li>
-        <li><strong>Lab 2:</strong> Deploying AI workloads on AWS Graviton cloud servers</li>
-        <li><strong>Lab 3:</strong> Comparing Cloud vs. Edge inference trade-offs</li>
-    </ul>
+## The Problem We’re Solving
 
-    <p>Each lab is supported by structured lectures covering key concepts from GenAI inference challenges to advanced optimization techniques using SIMD instructions and quantization.</p>
+As generative AI becomes ubiquitous, a critical bottleneck has emerged: how do we efficiently deploy these powerful models across the spectrum—from edge devices like Raspberry Pi to cloud servers? This becomes especially complex with Arm architectures, which power everything from smartphones to AWS Graviton instances.
 
-    <h2>What You'll Master</h2>
-    <p>Participants gain hands-on experience with:</p>
-    <ul>
-        <li>Arm-specific optimization techniques (SVE, Neon, low-bit quantization)</li>
-        <li>Practical deployment strategies across mobile, edge, and cloud platforms</li>
-        <li>Industry-standard tools like PyTorch, ONNX Runtime, and Arm-optimized libraries</li>
-        <li>Real-world performance analysis and trade-off evaluation</li>
-    </ul>
+## A Practical, Hands-On Approach
 
-    <div class="highlight">
-        <strong>Course Requirements:</strong> Foundational ML knowledge, access to Raspberry Pi 5, and an Arm-based cloud instance (AWS Graviton validated).
-    </div>
+This course stands out through its three core laboratories that tackle real-world scenarios:
 
-    <h2>Open and Accessible</h2>
-    <p>The complete course materials are freely available on GitHub, reflecting our commitment to making high-quality AI education accessible. Whether you're optimizing mobile AI applications, exploring edge deployment, or working with cloud workloads, this course provides immediately applicable skills.</p>
+- **Lab 1:** Optimizing generative AI on Raspberry Pi 5  
+- **Lab 2:** Deploying AI workloads on AWS Graviton cloud servers  
+- **Lab 3:** Comparing cloud vs. edge inference trade-offs  
 
-    <p>The future of AI lies not just in bigger models, but in smarter deployment strategies. As Arm architectures become increasingly prevalent, understanding optimization for these platforms becomes essential for any AI practitioner.</p>
+Each lab is supported by structured lectures covering key concepts from GenAI inference challenges to advanced optimization techniques using SIMD instructions and quantization.
 
-    <a href="https://github.com/arm-university/AI-on-Arm" class="course-link">Explore the Course on GitHub →</a>
+## What You’ll Master
 
-    <p><em>Ready to bridge the gap between AI theory and efficient real-world deployment? The journey starts with understanding how to make powerful AI models work beautifully on the hardware that powers our connected world.</em></p>
-</body>
-</html>
+Participants gain hands-on experience with:
+
+- Arm-specific optimization techniques (SVE, Neon, low-bit quantization)
+- Practical deployment strategies across mobile, edge, and cloud platforms
+- Industry-standard tools like PyTorch, ONNX Runtime, and Arm-optimized libraries
+- Real-world performance analysis and trade-off evaluation
+
+> **Course Requirements:** Foundational ML knowledge, access to Raspberry Pi 5, and an Arm-based cloud instance (AWS Graviton validated).
+
+## Open and Accessible
+
+The complete course materials are freely available on GitHub, reflecting our commitment to making high-quality AI education accessible. Whether you’re optimizing mobile AI applications, exploring edge deployment, or working with cloud workloads, this course provides immediately applicable skills.
+
+The future of AI lies not just in bigger models, but in smarter deployment strategies. As Arm architectures become increasingly prevalent, understanding optimization for these platforms becomes essential for any AI practitioner.
+
+[Explore the Course on GitHub →](https://github.com/arm-university/AI-on-Arm)
+
+*Ready to bridge the gap between AI theory and efficient real-world deployment? The journey starts with understanding how to make powerful AI models work beautifully on the hardware that powers our connected world.*
+
+
+
+
+
+
