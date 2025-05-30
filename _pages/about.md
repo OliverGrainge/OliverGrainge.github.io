@@ -1,13 +1,10 @@
 ---
-
 permalink: /
 title: "Welcome to my website"
-author\_profile: true
-redirect\_from:
-
-* /about/
-* /about.html
-
+author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
 ---
 
 Hi, I’m **Oliver Grainge** – a researcher and engineer passionate about machine intelligence, computer vision, and NLP. My work is driven by a no‑nonsense, data‑driven approach that prioritizes efficient, scalable, and robust solutions for real‑world problems.
