@@ -8,7 +8,7 @@ collection: portfolio
 
 I recently had the opportunity to develop a comprehensive course with Arm University called **“Generative AI on Arm”** that addresses one of the most critical challenges in modern AI: deploying generative models efficiently across diverse computing environments.
 
-[![AI on Arm GitHub Repository](image/ai_on_arm.png)](https://github.com/arm-university/AI-on-Arm)  
+[![AI on Arm GitHub Repository](images/ai_on_arm.png)](https://github.com/arm-university/AI-on-Arm)  
 *Click to view the AI-on-Arm GitHub repository*
 
 ## The Problem We’re Solving
