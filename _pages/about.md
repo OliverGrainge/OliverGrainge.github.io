@@ -19,7 +19,7 @@ My work centers on making AI more efficient without sacrificing performance:
 
 **Hardware-Aware Optimization** — Creating deployment-ready solutions that bridge the gap between academic research and commercial applications on embedded platforms.
 
-My research has been published in venues like *IEEE Robotics and Automation Letters* and implemented in production systems through partnerships with **Foster + Partners** and **Arm**.
+My research has been published in venues like *IEEE Robotics and Automation Letters* and implemented through partnerships with **Foster + Partners** and **Arm**.
 
 ## What You'll Find Here
 
