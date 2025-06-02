@@ -4,12 +4,13 @@ excerpt: "A comprehensive hands-on course developed with Arm University covering
 collection: portfolio
 ---
 
-# Building “Generative AI on Arm”: A Hands-On Course for Efficient AI Inference
+# Building "Generative AI on Arm": A Hands-On Course for Efficient AI Inference
 
-I recently had the opportunity to develop a comprehensive course with Arm University called **“Generative AI on Arm”** that addresses one of the most critical challenges in modern AI: deploying generative models efficiently across diverse computing environments.
+I recently had the opportunity to develop a comprehensive course with Arm University called **"Generative AI on Arm"** that addresses one of the most critical challenges in modern AI: deploying generative models efficiently across diverse computing environments.
 
 ![AI on Arm GitHub Repository](images/ai_on_arm.png)
-*Click to view the AI-on-Arm GitHub repository*
+
+[View the AI-on-Arm GitHub Repository](https://github.com/arm-university/AI-on-Arm)
 
 ## The Problem We’re Solving
 
