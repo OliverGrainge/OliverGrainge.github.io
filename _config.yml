@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Oliver's Homepage"
+title                    : "Oliver Grainge"
 title_separator          : "-"
 name                     : &name "Oliver Grainge"
-description              : &description "AI researcher specializing in neural network quantization, compression and efficient deployment. PhD candidate at the University of Southampton."
+description              : &description "AI Engineer & Researcher specializing in production ML optimization, model compression, and efficient deployment. PhD candidate at the University of Southampton."
 #url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 url                      : "https://olivergrainge.github.io/"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -29,7 +29,7 @@ author:
   avatar           : "profile.png"
   name             : "Oliver Grainge"
   pronouns         : # example: "she/her"  
-  bio              : "AI Researcher & Engineer | Neural network quantization, compression & edge deployment | PhD candidate, University of Southampton | Open to ML Engineer & Research Scientist roles"
+  bio              : "AI Engineer & Researcher specializing in ML optimization and deployment. Expert in model compression, custom CUDA kernels, and edge inference. PhD candidate at Southampton. Published in IEEE RAL & AAAI."
   location         : "East Sussex, United Kingdom"
   employer         : "University Of Southampton"
   uri              : # URL
