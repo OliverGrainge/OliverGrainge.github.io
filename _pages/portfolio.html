@@ -7,8 +7,38 @@ author_profile: true
 
 {% include base_path %}
 
-
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
-
+<div class="portfolio-grid">
+  {% for post in site.portfolio reversed %}
+    <div class="portfolio-card">
+      {% if post.header.teaser %}
+        <a href="{{ base_path }}{{ post.url }}" class="portfolio-card__image-link">
+          <div class="portfolio-card__image">
+            <img src=
+              {% if post.header.teaser contains "://" %}
+                "{{ post.header.teaser }}"
+              {% else %}
+                "{{ post.header.teaser | prepend: '/images/' | prepend: base_path }}"
+              {% endif %}
+              alt="{{ post.title }}">
+          </div>
+        </a>
+      {% endif %}
+      <div class="portfolio-card__body">
+        {% if post.tags.size > 0 %}
+          <div class="portfolio-card__tags">
+            {% for tag in post.tags %}
+              <span class="portfolio-tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+        <h3 class="portfolio-card__title">
+          <a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
+        </h3>
+        {% if post.excerpt %}
+          <p class="portfolio-card__excerpt">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>
+        {% endif %}
+        <a href="{{ base_path }}{{ post.url }}" class="portfolio-card__read-more">Read more &rarr;</a>
+      </div>
+    </div>
+  {% endfor %}
+</div>

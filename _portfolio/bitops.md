@@ -1,7 +1,13 @@
 ---
-title: "BitOps: High-Performance Ternary Matrix Multiplication for Quantized Neural Networks"
-excerpt: "A high-performance library for ternary matrix multiplication with optimized CPU (ARM NEON, x86 AVX2/SSE4.1) and CUDA backends, achieving 16x memory reduction through 2-bit weight packing."
+title: "BitOps: High-Performance Ternary Matrix Multiplication"
+excerpt: "Optimized ternary matmul across ARM NEON, x86 AVX2, and CUDA backends. 16x memory reduction via 2-bit weight packing."
 collection: portfolio
+header:
+  teaser: bitops_benchmark_cpu.png
+tags:
+  - Open Source
+  - C++
+  - CUDA
 ---
 
 Deploying quantized neural networks efficiently requires matrix multiplication kernels that can exploit the extreme sparsity and low bit-width of ternary weights. **BitOps** is a library purpose-built for this: it provides optimized ternary matrix multiplication across CPU and GPU backends, packing weights into just 2 bits each for a **16x memory reduction** over float32.

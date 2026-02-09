@@ -1,7 +1,13 @@
 ---
 title: "Generative AI on Arm: Efficient AI Inference Course"
-excerpt: "A comprehensive hands-on course developed with Arm University covering optimization of generative AI workloads across Arm architectures. Features three practical labs spanning mobile devices, cloud servers, and edge-to-cloud deployment comparisons using Raspberry Pi 5 and AWS Graviton."
+excerpt: "Hands-on course with Arm University covering optimization of generative AI workloads across Arm architectures, with labs spanning mobile, cloud, and edge deployment."
 collection: portfolio
+header:
+  teaser: ai_on_arm.png
+tags:
+  - Education
+  - ARM
+  - Inference
 ---
 
 # Building "Generative AI on Arm": A Hands-On Course for Efficient AI Inference

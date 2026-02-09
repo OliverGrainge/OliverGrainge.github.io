@@ -29,7 +29,7 @@ author:
   avatar           : "profile.png"
   name             : "Oliver Grainge"
   pronouns         : # example: "she/her"  
-  bio              : "AI Engineer & Researcher specializing in ML optimization and deployment. Expert in model compression, custom CUDA kernels, and edge inference. PhD candidate at Southampton. Published in IEEE RAL & AAAI."
+  bio              : "AI Engineer & Researcher. Model compression, CUDA kernels, edge inference. PhD candidate at Southampton."
   location         : "East Sussex, United Kingdom"
   employer         : "University Of Southampton"
   uri              : # URL

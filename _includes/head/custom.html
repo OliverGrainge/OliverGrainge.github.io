@@ -303,9 +303,106 @@
     color: #fff !important;
   }
 
+  /* --- Portfolio page grid --- */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.2em;
+    margin-top: 0.5em;
+  }
+  .portfolio-card {
+    border: 1px solid var(--global-border-color, #e1e4e8);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.25s, border-color 0.25s, transform 0.2s;
+    background: var(--global-bg-color, #fff);
+  }
+  .portfolio-card:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.09);
+    border-color: #0366d6;
+    transform: translateY(-2px);
+  }
+  .portfolio-card__image-link {
+    display: block;
+    text-decoration: none !important;
+  }
+  .portfolio-card__image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background: var(--global-border-color, #f0f0f0);
+  }
+  .portfolio-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  .portfolio-card:hover .portfolio-card__image img {
+    transform: scale(1.04);
+  }
+  .portfolio-card__body {
+    padding: 1em 1.2em 1.2em;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .portfolio-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3em;
+    margin-bottom: 0.5em;
+  }
+  .portfolio-tag {
+    display: inline-block;
+    padding: 0.15em 0.55em;
+    font-size: 0.68em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-radius: 3px;
+    background: #e8f0fe;
+    color: #0366d6;
+  }
+  .portfolio-card__title {
+    font-size: 1.05em;
+    font-weight: 700;
+    margin: 0 0 0.4em;
+    line-height: 1.3;
+  }
+  .portfolio-card__title a {
+    text-decoration: none !important;
+    color: var(--global-text-color, #24292e);
+  }
+  .portfolio-card__title a:hover {
+    color: #0366d6;
+  }
+  .portfolio-card__excerpt {
+    font-size: 0.83em;
+    color: var(--global-text-color-light, #586069);
+    line-height: 1.5;
+    margin: 0 0 0.8em;
+    flex: 1;
+  }
+  .portfolio-card__read-more {
+    font-size: 0.82em;
+    font-weight: 600;
+    color: #0366d6;
+    text-decoration: none !important;
+    align-self: flex-start;
+  }
+  .portfolio-card__read-more:hover {
+    text-decoration: underline !important;
+  }
+
   /* responsive adjustments */
   @media (max-width: 600px) {
     .project-grid {
+      grid-template-columns: 1fr;
+    }
+    .portfolio-grid {
       grid-template-columns: 1fr;
     }
     .exp-item-header {

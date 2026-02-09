@@ -1,7 +1,13 @@
 ---
-title: "TAT-VPR: Ternary Adaptive Transformer for Dynamic and Efficient Visual Place Recognition"
-excerpt: "An adaptive ternary-quantized Vision Transformer that lets robots dial accuracy versus compute on the fly—shrinking model size 5 × and cutting inference operations by up to 40 % while maintaining state-of-the-art Recall @ 1."
+title: "TAT-VPR: Ternary Adaptive Transformer for Dynamic Visual Place Recognition"
+excerpt: "Adaptive ternary-quantized ViT with runtime accuracy/compute control. 5x model compression and up to 40% operation reduction."
 collection: portfolio
+header:
+  teaser: TAT.png
+tags:
+  - Research
+  - Quantization
+  - Robotics
 ---
 
 Visual Place Recognition (VPR) is the task of locating a query image by matching it against a geo-tagged database, and it forms the backbone of loop-closure in SLAM and long-term navigation. Modern Vision-Transformer descriptors offer unmatched robustness to viewpoint, seasonal and lighting changes, yet their memory and compute budgets still exceed what a micro-UAV or embedded rover can spare. **TAT-VPR** tackles this head-on by marrying **extreme low-bit quantization** with **adaptive activation sparsity**, giving a single model that can scale its cost up or down at run-time without retraining. :contentReference[oaicite:0]{index=0}

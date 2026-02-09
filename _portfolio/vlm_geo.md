@@ -1,7 +1,13 @@
 ---
-title: "The Privacy Paradox of Visual Place Recognition: When AI Gets Too Good at Knowing Where You Are"
-excerpt: "Exploring the growing privacy risks posed by Vision-Language Models that can pinpoint locations from images, and our research into responsible geolocation AI."
+title: "VLM Geolocation: Privacy Risks of Vision-Language Models"
+excerpt: "Systematic evaluation of 25+ VLMs for geolocation, revealing privacy risks. Developed mitigation techniques reducing accuracy by 40%. Published at AAAI 2025."
 collection: portfolio
+header:
+  teaser: privloc-fig1.png
+tags:
+  - Research
+  - AI Safety
+  - VLMs
 ---
 
 Visual Place Recognition (VPR) represents one of computer vision's most practically important challenges: teaching machines to understand where they are by looking around. For robotics and autonomous systems, this capability is vital for navigation and mapping, especially in environments where GPS signals are unreliable or unavailable. But as AI systems become increasingly sophisticated at this task, we're facing an uncomfortable truth—the same technology that helps robots navigate is becoming dangerously good at invading human privacy.

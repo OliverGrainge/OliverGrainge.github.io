@@ -1,7 +1,13 @@
 ---
-title: "BitCore: Quantization-Aware Ternary Linear Layers for PyTorch"
-excerpt: "A PyTorch library providing drop-in ternary linear layers with quantization-aware training and seamless deployment via BitOps, supporting BitNet, TWN, and ParetoQ quantization schemes."
+title: "BitCore: Quantization-Aware Training Toolkit"
+excerpt: "Drop-in ternary linear layers for PyTorch with QAT and seamless BitOps deployment. Supports BitNet, TWN, and ParetoQ for 8x memory savings."
 collection: portfolio
+header:
+  teaser: fig1.jpg
+tags:
+  - Open Source
+  - PyTorch
+  - Quantization
 ---
 
 Training and deploying ternary-quantized neural networks typically requires juggling two very different codepaths: a gradient-aware training path that simulates low-bit arithmetic, and a deployment path that actually runs it. **BitCore** bridges the two with a single `BitLinear` module that works as a drop-in replacement for `nn.Linear`—train with quantization-aware gradients, then flip to optimized inference with one call.
