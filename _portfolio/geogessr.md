@@ -3,7 +3,7 @@ title: "PRIV-LOC Demo: Play GeoGuessr vs Vision-Language Models"
 excerpt: "Test your place-recognition skills against state-of-the-art VLMs in this interactive GeoGuessr-style game. Built on Hugging Face Spaces."
 collection: portfolio
 header:
-  teaser: REPLACE_ME.png
+  teaser: priv-loc-image.jpg
 tags:
   - Demo
   - AI Safety
