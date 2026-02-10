@@ -13,13 +13,11 @@ author_profile: true
       {% if post.header.teaser %}
         <a href="{{ base_path }}{{ post.url }}" class="portfolio-card__image-link">
           <div class="portfolio-card__image">
-            <img src=
-              {% if post.header.teaser contains "://" %}
-                "{{ post.header.teaser }}"
-              {% else %}
-                "{{ post.header.teaser | prepend: '/images/' | prepend: base_path }}"
-              {% endif %}
-              alt="{{ post.title }}">
+            {%- if post.header.teaser contains "://" -%}
+            <img src="{{ post.header.teaser }}" alt="{{ post.title }}">
+            {%- else -%}
+            <img src="{{ post.header.teaser | prepend: '/images/' | prepend: base_path }}" alt="{{ post.title }}">
+            {%- endif -%}
           </div>
         </a>
       {% endif %}
