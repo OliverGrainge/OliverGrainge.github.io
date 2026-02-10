@@ -3,7 +3,7 @@ title: "BitNet Chat: Interactive 1.58-bit LLM Demo"
 excerpt: "Gradio web app for real-time chat with 1.58-bit BitNet models. 24x speedup and 80% memory reduction on ARM M4 vs PyTorch FP32."
 collection: portfolio
 header:
-  teaser: REPLACE_ME.png
+  teaser: bitnet-chat-demo.jpg
 tags:
   - Open Source
   - LLMs
