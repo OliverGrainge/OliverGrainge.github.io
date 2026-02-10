@@ -3,7 +3,7 @@ title: "VSLAM: Stereo Visual SLAM Pipeline"
 excerpt: "Pure-Python stereo SLAM pipeline (KITTI-compatible) with feature tracking, stereo matching, PnP/ICP motion estimation, and bundle adjustment."
 collection: portfolio
 header:
-  teaser: REPLACE_ME.png
+  teaser: vslam-image.jpg
 tags:
   - Open Source
   - Computer Vision
