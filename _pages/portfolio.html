@@ -16,7 +16,7 @@ author_profile: true
             {%- if post.header.teaser contains "://" -%}
             <img src="{{ post.header.teaser }}" alt="{{ post.title }}">
             {%- else -%}
-            <img src="{{ post.header.teaser | prepend: '/images/' | prepend: base_path }}" alt="{{ post.title }}">
+            <img src="{{ post.header.teaser | prepend: 'images/' | prepend: base_path }}" alt="{{ post.title }}">
             {%- endif -%}
           </div>
         </a>
