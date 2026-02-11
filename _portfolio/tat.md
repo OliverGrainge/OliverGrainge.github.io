@@ -21,7 +21,7 @@ Think of a robot flying through a forest: to know *where* it has been before, it
 TAT-VPR compresses the ViT backbone **5 ×** with **ternary weight quantization** and slashes the arithmetic workload **up to 40 %** via a **learned top-k activation gate**. Crucially, sparsity is *controllable at inference time*, so the same model can run in “turbo” mode on a desktop or in “battery-saver” mode on a nano-computer.
 
 ### Figure&nbsp;1: TAT-VPR Training Pipeline  
-![TAT-VPR Pipeline](/images/TAT.jpg)  
+![TAT-VPR Pipeline](/images/TAT.png)  
 *Figure 1. A frozen full-precision DINOv2-BoQ teacher supervises a sparsity-gated ternary student during progressive distillation.* :contentReference[oaicite:2]{index=2}
 
 ## How TAT-VPR Works
