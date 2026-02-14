@@ -13,7 +13,7 @@ tags:
 
 The explosion of AI workloads has pushed data centres to their thermal, power, and carbon limits. Managing these facilities is a high-stakes optimization problem: keep GPUs cool enough to avoid throttling, schedule workloads to hit SLA deadlines, minimize carbon emissions, and respond to equipment failures—all while balancing operational costs. **RackMind** is a high-fidelity simulator built to train and benchmark AI agents for this exact challenge, providing a safe, repeatable environment with standardized evaluation across real-world scenarios.
 
-[View the RackMind GitHub Repository](https://github.com/yourusername/dc-simulator)
+[View the RackMind GitHub Repository](https://github.com/OliverGrainge/RackMind)
 
 ## The Problem
 
