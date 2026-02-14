@@ -27,7 +27,7 @@ RackMind models a 128-GPU facility with realistic thermal, power, GPU, network, 
 
 ### Figure 1: Live Dashboard
 
-![Dashboard Demo](rackmind_demo.gif)
+![Dashboard Demo](/images/rackmind_demo.gif)
 *Figure 1. The real-time monitoring dashboard provides visibility across all eight facility subsystems, updated every simulation tick.*
 
 The simulator enforces physical constraints: heat recirculation between racks, non-linear GPU power curves, time-varying grid carbon intensity, and queuing latency in the network fabric. Failures inject realistic disruptions—CRAC degradation, GPU errors, network partitions—that agents must detect and recover from autonomously.
