@@ -3,11 +3,17 @@ layout: archive
 title: "Work"
 intro: "Research, open-source libraries and demos, mostly about making models smaller, faster and cheaper to run."
 permalink: /portfolio/
+pinned: [sparse_latent_attention, sparse_attention_kernel]
 ---
 {% assign root = site.baseurl %}
 
 <div class="card-grid">
-  {% for post in site.portfolio reversed %}
+  {%- comment -%} Pinned projects first, in the order listed in the front matter; then the rest. {%- endcomment -%}
+  {% assign ordered = "" | split: "" %}
+  {% for slug in page.pinned %}{% for p in site.portfolio %}{% if p.slug == slug %}{% assign ordered = ordered | push: p %}{% endif %}{% endfor %}{% endfor %}
+  {% assign rest = site.portfolio | reverse %}
+  {% for p in rest %}{% unless page.pinned contains p.slug %}{% assign ordered = ordered | push: p %}{% endunless %}{% endfor %}
+  {% for post in ordered %}
     {% assign parts = post.title | split: ": " %}
     <a class="card" href="{{ root }}{{ post.url }}">
       {% if post.header.teaser %}
