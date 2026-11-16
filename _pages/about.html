@@ -1,0 +1,183 @@
+---
+layout: default
+permalink: /
+title: "AI Engineer & Researcher"
+description: "Oliver Grainge — AI engineer and researcher working on model compression, custom GPU/CPU kernels and efficient deployment. PhD candidate at the University of Southampton."
+redirect_from:
+  - /about/
+  - /about.html
+featured: [bitops, bitcore, tetra, vlm_geo, rackmind]
+---
+{% assign root = site.baseurl %}
+
+<section class="wrap hero">
+  <div class="hero__grid">
+    <div>
+      <p class="eyebrow"><span>AI Engineer &amp; Researcher</span><span>PhD candidate, Southampton</span></p>
+      <h1 class="hero__title">I make neural networks small and fast enough to run <em>anywhere</em>.</h1>
+      <p class="hero__lede">
+        I take models from research to production: quantizing them down to <strong>1.58 bits</strong>,
+        writing the <strong>CUDA, Triton and ARM&nbsp;NEON</strong> kernels that run them, and
+        co-designing for the hardware underneath. Currently researching efficient visual place
+        recognition at the University of Southampton and building performance tooling with Arm.
+      </p>
+      <ul class="link-row">
+        <li><a class="pill-link pill-link--solid" href="mailto:{{ site.author.email }}">Get in touch</a></li>
+        <li><a class="pill-link" href="{{ root }}/files/resume.pdf">CV</a></li>
+        <li><a class="pill-link" href="https://github.com/{{ site.author.github }}">GitHub</a></li>
+        <li><a class="pill-link" href="{{ site.author.googlescholar }}">Scholar</a></li>
+        <li><a class="pill-link" href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a></li>
+      </ul>
+    </div>
+    <figure class="hero__portrait">
+      <img src="{{ root }}/images/{{ site.author.avatar }}" alt="Portrait of Oliver Grainge" width="200" height="250">
+      <figcaption class="label">{{ site.author.location }}</figcaption>
+    </figure>
+  </div>
+</section>
+
+<div class="wrap">
+  <ul class="figures" aria-label="Selected results">
+    <li><span class="figures__num">4&times;</span><span class="figures__what">less memory for 1.58-bit Stable Diffusion, 95% quality kept</span></li>
+    <li><span class="figures__num">2.5&times;</span><span class="figures__what">faster vision-language inference via speculative decoding</span></li>
+    <li><span class="figures__num">24&times;</span><span class="figures__what">BitNet speedup on Apple M4 over PyTorch FP32</span></li>
+    <li><span class="figures__num">25+</span><span class="figures__what">VLMs benchmarked for geolocation privacy risk</span></li>
+  </ul>
+
+  <section class="section" id="work">
+    <div class="section__label"><span class="num">01</span><h2>Selected work</h2></div>
+    <div>
+      <ul class="work-list">
+        {% for slug in page.featured %}
+          {% for p in site.portfolio %}
+            {% if p.slug == slug %}
+              {% assign parts = p.title | split: ": " %}
+              <li class="work-item">
+                <a href="{{ root }}{{ p.url }}">
+                  <div>
+                    <h3 class="work-item__title">{{ parts[0] }}<span class="arrow" aria-hidden="true">&rarr;</span></h3>
+                    <p class="work-item__desc">{{ p.excerpt | strip_html | strip_newlines }}</p>
+                    <p class="eyebrow">{% for tag in p.tags limit: 3 %}<span>{{ tag }}</span>{% endfor %}</p>
+                  </div>
+                  {% if p.header.teaser %}
+                    <div class="work-item__thumb"><img src="{{ root }}/images/{{ p.header.teaser }}" alt="" loading="lazy"></div>
+                  {% endif %}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+      <a class="section__more" href="{{ root }}/portfolio/">All projects &rarr;</a>
+    </div>
+  </section>
+
+  <section class="section" id="experience">
+    <div class="section__label"><span class="num">02</span><h2>Experience</h2></div>
+    <ol class="timeline">
+      <li>
+        <span class="timeline__date">Feb 2025 &ndash; Now</span>
+        <div>
+          <p class="timeline__role">Contract Researcher, Performance Engineering</p>
+          <p class="timeline__org">Arm &middot; Remote</p>
+          <p class="timeline__desc">Architected six hands-on tutorials for the Arm Total Performance toolkit covering memory optimization, library acceleration (APL, KleidiAI) and automated porting for AWS Graviton instances.</p>
+        </div>
+      </li>
+      <li>
+        <span class="timeline__date">Jun &ndash; Nov 2025</span>
+        <div>
+          <p class="timeline__role">Research Assistant</p>
+          <p class="timeline__org">University College London &middot; London</p>
+          <p class="timeline__desc">Engineered a 1.58-bit precision pipeline for Stable Diffusion (4&times; memory reduction, 95% quality retention). Designed custom CUDA and Triton kernels for bit-packed tensor operations, delivering a 30% speedup over the PyTorch baseline.</p>
+        </div>
+      </li>
+      <li>
+        <span class="timeline__date">Nov 2024 &ndash; Jan 2025</span>
+        <div>
+          <p class="timeline__role">Contract Researcher, AI Inference Optimization</p>
+          <p class="timeline__org">Arm &middot; Remote</p>
+          <p class="timeline__desc">Built demonstrations achieving 40% latency reduction via SIMD/INT8 on mobile and 2.1&times; throughput on cloud instances. Built a Hyperopt-based per-layer precision optimizer showing 22% memory reduction on GPT models.</p>
+        </div>
+      </li>
+      <li>
+        <span class="timeline__date">Aug 2024 &ndash; Jan 2025</span>
+        <div>
+          <p class="timeline__role">Visiting Researcher</p>
+          <p class="timeline__org">Queensland University of Technology &middot; Brisbane</p>
+          <p class="timeline__desc">Engineered speculative decoding for vision-language transformers, achieving a 2.5&times; inference speedup for sub-100&nbsp;ms robotic navigation. Implemented training-data filtering that matched accuracy with 38% less data.</p>
+        </div>
+      </li>
+      <li>
+        <span class="timeline__date">Jan 2024 &ndash; Jan 2025</span>
+        <div>
+          <p class="timeline__role">Research Fellow</p>
+          <p class="timeline__org">AI Security Institute &middot; Remote</p>
+          <p class="timeline__desc">Built an automated benchmarking framework evaluating 25+ VLMs across 26k geo-tagged images with 99.9% reliability over 500k+ API calls. Developed privacy-preserving techniques that cut geolocation accuracy by 40%, with an interactive demo used by 5k+ people.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="section" id="publications">
+    <div class="section__label"><span class="num">03</span><h2>Selected publications</h2></div>
+    <div>
+      <ul class="pubs">
+        <li class="pub">
+          <h3 class="pub__title"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=Pg7KOd4AAAAJ&amp;citation_for_view=Pg7KOd4AAAAJ:qjMakFHDy7sC">Assessing the Geolocation Capabilities, Limitations and Societal Risks of Generative Vision-Language Models</a></h3>
+          <p class="pub__meta label"><span class="venue">AAAI 2025</span></p>
+          <p class="pub__note">First comprehensive benchmark of VLM geolocation capabilities across four datasets.</p>
+        </li>
+        <li class="pub">
+          <h3 class="pub__title"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=Pg7KOd4AAAAJ&amp;citation_for_view=Pg7KOd4AAAAJ:9yKSN-GCB0IC">TeTRA-VPR: A Ternary Transformer for Compact Visual Place Recognition</a></h3>
+          <p class="pub__meta label"><span class="venue">IEEE RA-L</span></p>
+          <p class="pub__note">65% memory and 35% latency reduction for VPR transformers.</p>
+        </li>
+        <li class="pub">
+          <h3 class="pub__title"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=Pg7KOd4AAAAJ&amp;citation_for_view=Pg7KOd4AAAAJ:d1gkVwhDpl0C">Design Space Exploration of Low-Bit Quantized Visual Place Recognition</a></h3>
+          <p class="pub__meta label"><span class="venue">IEEE RA-L</span></p>
+          <p class="pub__note">Deployment guidelines for extreme quantization on embedded devices.</p>
+        </li>
+        <li class="pub">
+          <h3 class="pub__title"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=Pg7KOd4AAAAJ&amp;citation_for_view=Pg7KOd4AAAAJ:u-x6o8ySG0sC">Structured Pruning for Efficient Visual Place Recognition</a></h3>
+          <p class="pub__meta label"><span class="venue">IEEE RA-L</span></p>
+          <p class="pub__note">Channel pruning with 21% lower latency and 16% less memory at under 1% accuracy loss.</p>
+        </li>
+      </ul>
+      <a class="section__more" href="{{ root }}/publications/">All publications &rarr;</a>
+    </div>
+  </section>
+
+  <section class="section" id="toolkit">
+    <div class="section__label"><span class="num">04</span><h2>Toolkit</h2></div>
+    <dl class="toolkit">
+      <dt>Languages</dt>
+      <dd>Python, C/C++, CUDA, Triton, Bash, SQL</dd>
+      <dt>Optimization</dt>
+      <dd>Quantization (INT8, INT4, ternary), QAT/PTQ, GPTQ, AWQ, pruning, distillation, LoRA/QLoRA, FlashAttention, SIMD (NEON, AVX2)</dd>
+      <dt>Frameworks</dt>
+      <dd>PyTorch, TensorFlow, Hugging Face, vLLM, llama.cpp, ONNX Runtime, TensorRT, OpenCV</dd>
+      <dt>Infrastructure</dt>
+      <dd>AWS (EC2, Graviton), Docker, Kubernetes, SLURM, Ray, MLflow, W&amp;B, Triton Inference Server, FastAPI</dd>
+    </dl>
+  </section>
+
+  <section class="section" id="education">
+    <div class="section__label"><span class="num">05</span><h2>Education</h2></div>
+    <div>
+      <div class="edu">
+        <p class="edu__degree">PhD (iPhD) in Machine Intelligence</p>
+        <p class="edu__meta">University of Southampton &middot; 2022 &ndash; present</p>
+        <p class="edu__meta">Thesis: <em>Efficient Resource-Constrained Visual Place Recognition</em></p>
+      </div>
+      <div class="edu">
+        <p class="edu__degree">BEng Electronics and Electrical Engineering, First Class (83%)</p>
+        <p class="edu__meta">University of Southampton &middot; 2019 &ndash; 2022</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <p class="eyebrow">Contact</p>
+    <h2 class="contact__title">Working on efficient ML or production AI? <a href="mailto:{{ site.author.email }}">Let&rsquo;s talk.</a></h2>
+  </section>
+</div>

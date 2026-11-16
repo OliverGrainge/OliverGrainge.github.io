@@ -1,31 +1,57 @@
----
-layout: compress
----
-
-{% include base_path %}
-
+{% assign root = site.baseurl %}
 <!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
+<html lang="{{ site.locale | slice: 0,2 }}">
   <head>
-    {% include head.html %}
-    {% include head/custom.html %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include seo.html %}
+    <link href="{{ root }}/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ root }}/images/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/svg+xml" href="{{ root }}/images/favicon.svg">
+    <link rel="icon" type="image/png" href="{{ root }}/images/favicon-32x32.png" sizes="32x32">
+    <link rel="manifest" href="{{ root }}/images/manifest.json">
+
+    <meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#141413" media="(prefers-color-scheme: dark)">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ root }}/assets/css/site.css">
+    {% include analytics.html %}
   </head>
 
-  <body>
+  <body class="{% if page.url == '/' %}is-home{% endif %}">
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
+    <header class="site-header">
+      <div class="wrap site-header__inner">
+        <a class="site-header__name" href="{{ root }}/">Oliver Grainge</a>
+        <nav class="site-nav" aria-label="Main">
+          {% for link in site.data.navigation.main %}
+            {% assign link_url = link.url %}
+            {% unless link.url contains "://" %}{% assign link_url = link.url | prepend: root %}{% endunless %}
+            <a href="{{ link_url }}"{% if page.url == link.url %} aria-current="page"{% endif %}>{{ link.title }}</a>
+          {% endfor %}
+        </nav>
+      </div>
+    </header>
 
-    {{ content }}
+    <main id="main">
+      {{ content }}
+    </main>
 
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
-    </div>
-
-    {% include scripts.html %}
-
+    <footer class="site-footer">
+      <div class="wrap site-footer__inner">
+        <span>&copy; {{ site.time | date: '%Y' }} Oliver Grainge</span>
+        <span class="site-footer__links">
+          <a href="mailto:{{ site.author.email }}">Email</a>
+          <a href="https://github.com/{{ site.author.github }}">GitHub</a>
+          <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a>
+          <a href="{{ site.author.googlescholar }}">Scholar</a>
+        </span>
+      </div>
+    </footer>
   </body>
 </html>
